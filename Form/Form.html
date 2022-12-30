@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<!-- quando se usa <form>, manda um http request e a gente controla para onde esse request vai
+         através do action="" 
+        <input> qual o tipo do forms
+        placeholder="" texto escrito dentro do forms, como mensagem para o usuário
+        <label> Liga um texto à um forms, tornando-o acessível para screen readers e são "clicáveis"
+        type="submit" o botão leva o usuário para algum lugar
+        type="button" ele só é um botão, a gente mexe nele dps com JS
+        se você tiver o input, não precisa de botão, apertar "enter" também funciona
+        pesquisar os tipos de input no MDN
+        required obriga a preencher o campo
+    -->
+
+<body>
+    <h1>Sua alma gêmea</h1>
+    <form action="https://www.hypeness.com.br/1/2013/01/Ugly-Models-agency3.jpg">
+        <p>
+            <label for="Nome">Digite seu nome:</label>
+            <input type="text" placeholder="Nome" id="Nome" name="nome" required>
+        </p>
+        <p>
+            <label for="mail">Digite seu e-mail:</label>
+            <input type="email" placeholder="E-mail" id="mail" name="mail" required>
+        </p>
+        <p>
+            <label for="Senha"> Digite sua senha:</label>
+            <input type="password" placeholder="Senha" id="Senha" name="senha" minlength="6" maxlength="10" required>
+        </p>
+        <p>
+            <label for="Cor">Selecione sua cor favorita:</label>
+            <input type="color" placeholder="Cor favorita" id="Cor" name="cor" required>
+        </p>
+        <p>
+            <label for="NF">Digite seu número favorito:</label>
+            <input type="number" placeholder="Número favorito" id="NF" name="nf" required>
+        </p>
+        <p>
+            <label for="MA">Selecione o mês e o ano do melhor acontecimento da sua vida:</label>
+            <input type="month" placeholder="Mês e ano do melhor acontecimento da sua vida" id="MA" name="ma" required>
+        </p>
+        <label for="Time">Digite o horário atual:</label>
+        <input type="time" placeholder="O horário neste momento" id="Time" name="time" required>
+        <p>
+            <label for="DN">Selecione sua data de nascimento:</label>
+            <input type="date" placeholder="Dia em que nasceu" id="DN" name="dn" min="1960-12-25" max="2005-12-25"
+                required>
+        </p>
+        <button type="submit">Veja quem é sua alma gêmea!</button>
+    </form>
+    <hr>
+    <h1>Pesquisa no Youtube</h1>
+    <form action="https://www.youtube.com/results">
+        <p>
+            <label for="pyt">Pesquise no Youtube:</label>
+            <input type="text" placeholder="Nome do vídeo" id="pyt" name="search_query" required>
+            <button>-></button>
+        </p>
+    </form>
+    <hr>
+    <h1>Tipo preferido:</h1>
+
+    <form action="https://www.youtube.com/results">
+        <p>
+        <h3>Cor do cabelo:</h3>
+        <input type="radio" id="loiro" name="cc" value="Loiro" required>
+        <label for="loiro">Loiro</label> <br>
+        <input type="radio" id="ruivo" name="cc" value="Ruivo" required>
+        <label for="ruivo">Ruivo</label> <br>
+        <input type="radio" id="moreno" name="cc" value="Moreno" required>
+        <label for="moreno">Moreno</label>
+        </p>
+        <p>
+        <h3>Altura:</h3>
+        <input type="radio" id="alto" name="al" value="Alto" required>
+        <label for="alto">Alto</label> <br>
+        <input type="radio" id="medio" name="al" value="Médio" required>
+        <label for="medio">Médio </label> <br>
+        <input type="radio" id="baixo" name="al" value="Baixo" required>
+        <label for="baixo">Baixo</label>
+        </p>
+        <h3>Ele(a) gosta de:</h3>
+        <input type="checkbox" id="vg" name="g" value="Games">
+        <label for="vg">Jogar vídeo game;</label> <br>
+        <input type="checkbox" id="acd" name="g" value="Academia">
+        <label for="acd">Academia;</label> <br>
+        <input type="checkbox" id="ler" name="g" value="Ler">
+        <label for="ler">Ler;</label> <br>
+        <input type="checkbox" id="je" name="g" value="Esporte">
+        <label for="je">Jogar algum esporte;</label> <br>
+        <input type="checkbox" id="dese" name="g" value="Desenhar">
+        <label for="dese">Desenhar;</label> <br>
+        <input type="checkbox" id="pg" name="g" value="Programar">
+        <label for="pg">Programar;</label> <br>
+        <input type="checkbox" id="cm" name="g" value="Cubo">
+        <label for="cm">Cubo mágico;</label> <br>
+        <input type="checkbox" id="sk8" name="g" value="Skate">
+        <label for="sk8">Skate;</label>
+        </p>
+        <p>
+            <label for="idade">Qual a idade?</label>
+            <select name="idade" id="idade" required>
+                <option value="">Por favor, selecione uma idade...</option>
+                <!--Mensagem inicial-->
+                <option value="16a17">16 anos até 17 anos</option>
+                <!--opções-->
+                <option value="18a20">18 anos até 20 anos</option>
+                <option value="21a26">21 anos até 26 anos</option>
+                <option value="27a30">27 anos até 30 anos</option>
+                <option value="31a40">31 anos até 40 anos</option>
+                <option value="41a56">41 anos até 56 anos</option>
+                <option value="57a59">57 anos até 59 anos</option>
+                <option value="60a70">60 anos até 70 anos</option>
+                <option value="71+">41 anos ou mais</option>
+            </select>
+        </p>
+        <p>
+        <h3>Beleza e personalidade:</h3>
+        <label for="beleza">Feio</label>
+        <input type="range" id="beleza" name="belezarate" min="0" max="10" value="5" required>
+        <!--tem o step="", que determina de quanto
+        em quanto a barra anda. Exemplo: Aumenta de 2 em 2, 5 em 5, etc-->
+        <label for="beleza">Bonito</label> <br>
+        <label for="personalidade1">Sério</label>
+        <input type="number" id="personalidade1" min="1" max="10" value="5" required>
+        <label for="personalidade1">Engraçado</label> <br>
+        <label for="personalidade2">Introvertido</label>
+        <input type="range" id="personalidade2" min="1" max="3" value="2" required>
+        <label for="personalidade2">Extrovertido</label> <br>
+        <label for="personalidade3">Calmo</label>
+        <input type="range" id="personalidade3" min="1" max="3" value="2" required>
+        <label for="personalidade3">Elétrico</label> <br>
+        <label for="plus">Alguma observação?</label> <br>
+        <textarea id="plus" rows="15" cols="30" name="plus" placeholder="Ex: Paciente, aventureiro..."></textarea>
+        <!--rows é linhas // cols é colunas // área para o usuário escrever algo grande-->
+        </p>
+
+        <button>Buscar</button>
+    </form>
+</body>
+
+</html>
